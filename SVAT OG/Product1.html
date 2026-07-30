@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Vari Agro Tech</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f8f4;
+}
+
+header{
+    background:#0a7d2c;
+    color:white;
+    padding:15px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+    nav a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+     
+      font-weight: bold;
+      transition: 0.3s;
+      display:inline;
+      flex-wrap: wrap;
+      justify-content:right;
+      list-style: none;
+      padding: 5px;
+      margin-left: 7px;
+      border-radius: 10px;
+     
+      transition: 0.3s;
+      
+    }
+   
+    nav a:hover{
+      border-bottom: 5px solid rgb(0, 255, 106);
+      border-top: 5px solid aqua;
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+
+    nav a:hover {
+      color:rgb(77, 231, 231);
+    }
+
+.hero{
+    height:90vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('https://upload.wikimedia.org/wikipedia/commons/6/64/An_Irrigation_sprinkler_watering_a_garden.gif');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero p{
+    margin:15px 0;
+    font-size:20px;
+}
+
+.btn{
+    background:#00c853;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    display:inline-block;
+}
+
+.section-title{
+    text-align:center;
+    margin:50px 0 20px;
+    color:#0a7d2c;
+}
+
+.products{
+    padding:20px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition: 0.3s;
+}
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#0a7d2c;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.buy-btn{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    border:none;
+    background:#0a7d2c;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.whatsapp{
+    display:block;
+    text-align:center;
+    margin-top:10px;
+    background:#25D366;
+    color:white;
+    padding:12px;
+    text-decoration:none;
+    border-radius:8px;
+}
+
+.features{
+    padding:60px 8%;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.feature{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    transition: 0.3s;
+}
+    .feature:hover {
+      transform: translateY(-10px);
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 50px;
+    }
+
+
+footer{
+    background:#84ccee;
+    color:rgb(54, 54, 54);
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+.float-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:35px;
+    }
+}
+.htext{
+   font-size:90px;
+    font-weight:900;
+    text-transform:uppercase;
+    
+    color:transparent;
+
+    background:linear-gradient(
+        90deg,
+        #5ac8f3,
+        rgb(0, 255, 115),
+        white,
+        #91c947,
+        #00f5ff
+    );
+
+    background-size:400%;
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    animation:
+    glow 3s linear infinite,
+    float 3s ease-in-out infinite;
+}
+@keyframes glow{
+
+    0%{
+        background-position:0%;
+    }
+
+    100%{
+        background-position:400%;
+    }
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:35px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="Home">
+    <div style="display:flex; align-items:center; gap:15px;">
+      <img
+        src="logo.jpeg"
+        alt="AGR Logo"
+        style="width:100px; height:100px; border-radius:50%; object-fit:cover;">
+      <div class="htext">
+      <h1 style="font-size: 50px;">SRI VARI AGRO TECH </h1>
+      </div>
+    </div>
+    
+    <nav>
+      <a href="index.html#home" style="font-size: 25px;">Home</a>
+      <a href="index.html#products"style="font-size: 25px;">Products</a>
+      
+      <a href="index.html#features"style="font-size: 25px;">Features</a>
+      <a href="index.html#contact"style="font-size: 25px;">Contact</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+    <div>
+        <h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 50px;">Smart Drip Irrigation Solutions</h1>
+        <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 30px;">Save Water • Increase Yield • Modern Farming</p>
+        <a href="#products" class="btn" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 20px;">Shop Now</a>
+    </div>
+</section>
+
+<h2 class="section-title" id="products">Our Products</h2>
+
+<section class="products">
+
+<div class="card">
+<img src="DRIP/nettaform type 16MM TAKEOFF.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Netta Form Type 16MM TAKEOFF</h4> 
+<br>
+<div class="price">₹4</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%Neeta%20Form%20Type%2016MM%20TakeOff:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16MM BIT.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM BIT</h4>
+<br>
+<div class="price">₹100</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Bit:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm elbow Rs.1.45.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Elbow</h4>
+<br>
+<div class="price">₹3</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Elbow:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm elbow tap Rs.4.00.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Elbow Tap</h4>
+<br>
+<div class="price">₹5</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Elbow%20Tap:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm endcap Rs.0.85.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Endcap</h4>
+<br>
+<div class="price">₹1.5</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20End%20Cap:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm joiner (finolex type) Rs.1.20.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Joiner (finolex type) </h4>
+<br>
+<div class="price">₹3</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Jioner%20(FinolexType):%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm take off.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Take Off Jain Type</h4>
+<br>
+<div class="price">₹3</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Take%20Off%20JainType:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+<div class="card">
+<img src="DRIP/16mm tap Rs.1.90 (2).jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM T Tap</h4>
+<br>
+<div class="price">₹5</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20T%20Tap:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/16mm tap Rs.1.90.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Tap</h4>
+<br>
+<div class="price">₹3</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20Tap:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/16mm y tee Rs.2.15.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">16 MM Y Tee</h4>
+<br>
+<div class="price">₹3</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%2016MM%20T%20Yee:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/Airvalve jabee.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Airvalve Jabee</h4>
+<br>
+<div class="price">₹80</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Airvalve%20T%20Jabee:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/Double uniyan value.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Double Union Valve</h4>
+<br>
+<div class="price">₹600</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Double%20Union%20Valve:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/DRILLBIT.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Drill Bit</h4>
+<br>
+<div class="price">₹150</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Drill%20Bit:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/DRPPER.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Dripper</h4>
+<br>
+<div class="price">₹2</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Dripper:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/FILTER.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">2.5" Filter</h4>
+<br>
+<div class="price">₹2499</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%202.5%20''%20Filter:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/VENTURI.jpg">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Venturi</h4>
+<br>
+<div class="price">₹299</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Venturi:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/Ms ballvalve handle.jpg" style="height: 425px;">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Ms Ballvalve Handle 2"</h4>
+<br>
+<div class="price">₹80</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20MS%20Ballvalve%20Handle%202':%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+<div class="card">
+<img src="DRIP/Single uniyan valve.jpg" style="height: 425px;">
+<div class="card-content">
+<h4 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; color: #5c7221;">Single Union Valve</h4>
+<br>
+<div class="price">₹150</div>
+
+<a class="whatsapp" href="https://wa.me/7010885215?text=Hi%20Sir%20I%20Need%20Single%20Union%20Valve:%20NOS" target="_blank">WhatsApp Order</a>
+</div>
+</div>
+
+
+
+
+
+
+
+</section>
+
+<h2 class="section-title" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 30px; color: rgb(87, 131, 131);">Why Choose Us</h2>
+
+<section class="features">
+<div class="feature">
+<h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Premium Quality</h3>
+<p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">High-quality irrigation products.</p>
+</div>
+
+<div class="feature">
+<h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Fast Delivery</h3>
+<p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Quick delivery across India.</p>
+</div>
+
+<div class="feature">
+<h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Expert Support</h3>
+<p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Professional agricultural guidance.</p>
+</div>
+
+<div class="feature">
+<h3 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Best Pricing</h3>
+<p style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">Competitive market rates.</p>
+</div>
+</section>
+
+  <section class="contact" id="contact">
+    <div class="contact-info" style="background:linear-gradient(135deg,#81c4d8,#93b3e6); color:rgb(0, 0, 0); padding:25px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,0.2);">
+      <div class="section-title" style="text-align:left; margin-bottom:35px;">
+        <h3 style="color:rgb(0, 0, 0); font-size:42px;">Contact Us</h3>
+        <p style="color:#363636; margin-right: 10px;font-family:Georgia, 'Times New Roman', Times, serif;">
+          Let’s build  a Modern Forming together.
+        </p>
+        
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:25px; font-size:18px;">
+
+        <div style="display:flex; gap:20px; margin-bottom:10px;">
+          <a href="https://www.instagram.com/d.moorthy92?igsh=cTFnbjRteWIyMmN3" target="_blank" style="text-decoration:none;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width:45px; height:45px; border-radius:12px;">
+          </a>
+
+          <a href="https://www.facebook.com/profile.php?id=61590241407836" target="_blank" style="text-decoration:none;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" style="width:45px; height:45px; border-radius:12px;">
+          </a>
+           <a href="mailto:srivnktshwr@gmail.com" target="_blank" style="text-decoration:none;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpTZq68j7iDV4Goh1svgOnI_HUGXFtcKwanw&s" alt="Email" style="width:45px; height:45px; border-radius:12px;">
+          </a>
+
+          <a href="https://wa.me/7010885215" target="_blank" style="text-decoration:none;">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" style="width:45px; height:45px; border-radius:12px;">
+          </a>
+        </div>
+        <div style="display:flex; align-items:center; gap:15px; background:rgba(253, 253, 253, 0.08); padding:20px; border-radius:18px;">
+          <div style="font-size:28px;">📞</div>
+          <div>
+            <h4 style="margin-bottom:5px;">Phone Number</h4>
+            <a href="tel:7010885215" style="color:#cbd5e1;">7010885215</a>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.08); padding:20px; border-radius:18px;">
+          <div style="font-size:35px;">📧</div>
+          <div>
+            <h4 style="margin-bottom:5px;">Email Address</h4>
+            <p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">srivnktshwr@gmail.com</p>
+          </div>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:15px; background:rgba(255,255,255,0.08); padding:20px; border-radius:18px;">
+          <div style="font-size:35px;">📍</div>
+          <div>
+            <h4 style="margin-bottom:5px;">Office Address</h4>
+            <p style="color:#3c3f42;">SRI VARI AGRO Tech<br></p><p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; "> Ninaiyur Village & post,Kallakuruchi (Dst)-606305</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contactForm" style="background:rgb(168, 228, 236); padding:45px; border-radius:25px; box-shadow:0 10px 30px rgba(0,0,0,0.1); border:1px solid #e5e7eb;">
+ <div style="display:flex; flex-direction:column; gap:25px; font-size:18px;">
+<div style="display:flex; gap:50px; margin-bottom:10px;">
+<h1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size: 35px;">DealerShip
+
+</h1>
+        </div>
+      </div>
+        <div style="display:flex; gap:50px; margin-bottom:10px;">
+          
+            <img src="data:image/png;base64,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" alt="Instagram" style="width:250px; height:250px; border-radius:12px;">
+         
+
+          
+            <img src="data:image/jpeg;base64,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" alt="Instagram" style="width:250px; height:250px; border-radius:12px;">
+       
+        
+        </div>
+      
+      
+<div style="display:flex; flex-direction:column; gap:50px; font-size:18px;">
+
+        <div style="display:flex; gap:50px; margin-bottom:10px;">
+          
+            <img src="Dealar1.png" alt="Instagram" style="width:250px; height:250px; border-radius:12px;">
+
+
+          
+            
+
+        
+        </div>
+      
+    </div>
+    </section>
+
+    
+
+
+<footer>
+© 2026 Sri Vari Agro Tech | All Rights Reserved
+<p style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-style: oblique;">Developed By <a href="https://krishna-sf-developer.github.io/portfolio-website/#" target="_blank"><img src="developer_logo-removebg-preview.png" alt="Developer png"   style="width:70px; height:45px; border-radius:12px;"></a></p>
+</footer>
+
+<a href="Product1.html#Home" class="float-whatsapp">↑</a>
+
+</body>
+</html>
